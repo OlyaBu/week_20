@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+    const todo= [
+        {name:"задача 1", isDone: false},
+        {name:"задача 2", isDone: false}
+    ];
+    let resultNode = document.createElement("ul");// сюда всё собираю
+    for (let item of todo) {
+        let itemNode=document.createElement("li");
+        let textNode =document.createElement("p");
+        let checkbox =document.createElement("input");
+
+        checkbox.addEventListener("change",(evt)=>{
+            item.isDone = !item.isDone;
+        });
+        textNode.textContent =item.name;
+        checkbox.type ="checkbox";
+        checkbox.checked = item.isDone;
+        itemNode.append(textNode);
+        itemNode.append(checkbox);
+        resultNode.append (itemNode);
+    }
+    document.body.append(resultNode);
+ </script>   
+</body>
+</html>
