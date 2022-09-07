@@ -41,14 +41,20 @@ for (let hero of heroes) {
         <div>Друзья: ${hero.friends}</div>
         <div> Суперспособности: ${hero.superpower}</div>
         <div> Рейтинг: </div>
+        <input type="radio" class="rating" required>
+        <input type="radio" class="rating" required>
+        <input type="radio" class="rating" required>
+        <input type="radio" class="rating" required>
+        <input type="radio" class="rating" required>
+
         </div>`;
     
 };
 
-
 document.querySelector(".container").innerHTML = heroContent;
 
-let localrating = JSON.parse(localStorage.getItem('localrating'));
+
+// let localrating = JSON.parse(localStorage.getItem('localrating'));
 
   });
 
